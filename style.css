@@ -422,6 +422,14 @@ header .navbar ul li a:hover {
         padding: 1rem 4rem;
     }
 
+    .about .row .counter {
+        flex: 1 1 48rem;
+        display: flex;
+        /* justify-content: center; */
+        flex-wrap: wrap;
+        margin: 10px;
+        padding-left: 6rem;
+    }
 }
 
 @media (max-width:991px) {
