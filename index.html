@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>responsive personal portfolio website design</title>
+    <title>Deep portfolio website</title>
+    <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"  sizes="48x48">  -->
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
@@ -214,73 +216,15 @@
     </div>
     <!-- contact section ends -->
     <!-- scroll top button  -->
-    <a href="#home" class="top">
+    <!-- <a href="#home" class="top">
         <img src="images/scroll-top-img.png" alt="">
-    </a>
+    </a> -->
     <!-- jquery cdn link  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js"></script>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-            apiKey: "AIzaSyA5J9j7_k9R7MtGXFN0Txgc7Sr7oLII4v4",
-            authDomain: "deep-portfolio-69ae2.firebaseapp.com",
-            projectId: "deep-portfolio-69ae2",
-            storageBucket: "deep-portfolio-69ae2.appspot.com",
-            messagingSenderId: "678763805287",
-            appId: "1:678763805287:web:24ee3a66a67c8b781732c2",
-            measurementId: "G-33S5VVMBCV"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-    </script>
+   
     <!-- custom js file link  -->
     <script src="script.js"></script>
-    <script>
-        // Attach an event listener to the form submission
-        document.getElementById("contactForm").addEventListener("submit", submitForm);
-        // Function to handle form submission
-        function submitForm(event) {
-            event.preventDefault(); // Prevent the form from submitting normally
-            // Get the input values
-            var name = document.querySelector("#contactForm input[placeholder='name']").value;
-            var email = document.querySelector("#contactForm input[placeholder='email']").value;
-            var project = document.querySelector("#contactForm input[placeholder='project']").value;
-            var message = document.querySelector("#contactForm textarea").value;
-            // Create a reference to your Firebase database
-            var database = firebase.database().ref("contacts");
-            // Push the data to the database
-            database.push({
-                name: name,
-                email: email,
-                project: project,
-                message: message
-            })
-                .then(function () {
-                    // Clear the form fields after successful submission
-                    document.querySelector("#contactForm input[placeholder='name']").value = "";
-                    document.querySelector("#contactForm input[placeholder='email']").value = "";
-                    document.querySelector("#contactForm input[placeholder='project']").value = "";
-                    document.querySelector("#contactForm textarea").value = "";
-                    // Display a success message (optional)
-                    alert("Message sent successfully!");
-                })
-                .catch(function (error) {
-                    // Handle errors (optional)
-                    console.error("Error sending message:", error);
-                });
-        }
-    </script>
+    
 </body>
 
 </html>
